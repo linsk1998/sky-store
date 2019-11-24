@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"target":"es5",
+		"allowJs": false,
+		"declaration": false,
+		"lib": [
+			"es5",
+			"es2015.core",
+			"es2017.object",
+			"es2015.collection",
+			"es2015.iterable",
+			"es2015.promise",
+			"es2015.proxy",
+			"es2015.reflect",
+			"dom"
+		],
+		"typeRoots" : ["../typings","../node_modules/@types"],
+		"module" : "commonjs",
+		"baseUrl": "../src",
+		"sourceMap": false,
+		"noEmitHelpers":false,
+		//"emitDecoratorMetadata":true,
+		"experimentalDecorators":true,
+		"resolveJsonModule": true,
+		"moduleResolution": "node",
+	},
+	"include": [
+		"./**/*",
+		"../src/**/*"
+	],
+	"compileOnSave": true
+}

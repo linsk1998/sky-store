@@ -1,0 +1,1 @@
+declare function createVBStore(Store:any):any;

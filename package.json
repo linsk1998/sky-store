@@ -1,0 +1,32 @@
+{
+	"name": "sky-store",
+	"version": "1.0.0",
+	"description": "state manager",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest",
+		"build": "tsc -p \"./src/tsconfig.json\""
+	},
+	"author": "linsk",
+	"license": "MIT",
+	"jest": {
+		"testRegex": "./jest/.*\\.(js|ts|tsx)$",
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"globals": {
+			"ts-jest": {
+				"tsConfig": "./jest/tsconfig.json"
+			}
+		},
+		"moduleNameMapper": {
+			"^sky-store$": "<rootDir>/src/sky-store.ts"
+		}
+	},
+	"devDependencies": {
+		"@types/jest": "^24.0.20",
+		"jest": "^24.9.0",
+		"ts-jest": "^24.1.0",
+		"typescript": "^3.6.4"
+	}
+}
