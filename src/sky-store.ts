@@ -4,6 +4,7 @@ export interface IStore{
 	[OPTIONS]:IStoreOptions
 }
 export interface IStoreOptions{
+	reactions:Map<string,Set<Function>>;
 	watchers:[string,Function][];
 	computedFrom:[string,IStore,string][];
 	computedTo:[string,IStore,string][];
@@ -25,7 +26,9 @@ interface IDep{
 export function watch(store:any,key:string,callback:(store:IStore,key:string)=>void){
 	store[OPTIONS].watchers.push([key,callback]);
 }
-//TODO:unwatch
+export function unwatch(){
+	
+}
 var actionStack:Set<Function>[]=[];
 function actionStart(){
 	actionStack.push(new Set());
